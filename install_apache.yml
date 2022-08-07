@@ -1,19 +1,65 @@
 ---
-
+ 
 - hosts: all
   become: true
   tasks:
-
+ 
   - name: update repository index
     apt:
       update_cache: yes
-
+    when: ansible_distribution == "Ubuntu"
+ 
   - name: install apache2 package
     apt:
       name: apache2
       state: latest
-
+    when: ansible_distribution == "Ubuntu"
+ 
   - name: add php support for apache
     apt:
       name: libapache2-mod-php
       state: latest
+    when: ansible_distribution == "Ubuntu"
+
+  - name: install htop
+    apt:
+      name: htop
+      state: latest
+    when: ansible_distribution == "Ubuntu"
+
+  - name: install neofetch
+    apt:
+      name: neofetch
+      state: latest
+    when: ansible_distribution == "Ubuntu"
+ 
+  - name: update repository index
+    apk:
+      update_cache: yes
+    when: ansible_distribution == "Alpine"
+ 
+  - name: install httpd package
+    apk:
+      name: apache2
+      state: latest
+    when: ansible_distribution == "Alpine"
+
+  - name: install php
+    apk:
+      name: php8
+      state: latest
+    when: ansible_distribution == "Alpine"
+ 
+  - name: install htop
+    apk:
+      name: htop
+      state: latest
+    when: ansible_distribution == "Alpine"
+
+  - name: install neofetch
+    apk:
+      name: neofetch
+      state: latest
+    when: ansible_distribution == "Alpine"
+
+
