@@ -1,4 +1,4 @@
-10.0.0.156
-10.0.0.157
-10.0.0.158
-10.0.0.161
+10.0.0.156 apache_package=apache2 php_package=libapache2-mod-php htop_package=htop neofetch_package=neofetch
+10.0.0.157 apache_package=apache2 php_package=libapache2-mod-php htop_package=htop neofetch_package=neofetch
+10.0.0.158 apache_package=apache2 php_package=libapache2-mod-php htop_package=htop neofetch_package=neofetch
+10.0.0.161 apache_package=apache2 php_package=php8 htop_package=htop neofetch_package=neofetch
